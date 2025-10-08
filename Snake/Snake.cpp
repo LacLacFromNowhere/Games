@@ -26,6 +26,7 @@ int main()
             if (_kbhit())
             {
                 direction = _getch();
+                clearInputBuffer();
                 if (direction == 27)
                     return 0;
                 if (direction == 'w' || direction == 'a' || direction == 's' || direction == 'd')
@@ -41,6 +42,7 @@ int main()
             if (_kbhit())
             {
                 char ch = _getch();
+                clearInputBuffer();
                 if (ch == 'r')
                 {
                     break;

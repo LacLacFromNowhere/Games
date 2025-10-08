@@ -29,6 +29,7 @@ extern int score;
 extern int speed;
 extern int tickDelay; 
 
+void clearInputBuffer();
 bool isEmpty(std::pair<int, int> position);
 bool isFood(std::pair<int, int> position);
 void generateMap(int width = mapWidth, int height = mapHeight, int mode = 0);

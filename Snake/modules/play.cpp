@@ -21,6 +21,7 @@ void play(char direction)
 
         {
             char newDir = _getch();
+            clearInputBuffer();
             if (newDir == 27)
             {
 
