@@ -21,12 +21,12 @@ bool moveSnake(char direction)
     }
     if (isEmpty(nextPosition) || isFood(nextPosition))
     {
-        updateMap(nextPosition, true);
+        updateCurrentMap(nextPosition, true);
         repaint();
         return true;
     }
-    
-    updateMap(nextPosition, false);
+
+    updateCurrentMap(nextPosition, false);
     repaint();
     return false;
 }

@@ -17,20 +17,14 @@ void play(char direction)
             break;
         }
 
-        if (_kbhit())
-
+        char newDir = getInputChar();
+        if (newDir != '\0')
         {
-            char newDir = _getch();
-            clearInputBuffer();
             if (newDir == 27)
             {
-
                 break;
             }
-            if ((newDir == 'w' && direction != 's') 
-            || newDir == 'a' && direction != 'd' 
-            || newDir == 's' && direction != 'w' 
-            || newDir == 'd' && direction != 'a')
+            if ((newDir == 'w' && direction != 's') || newDir == 'a' && direction != 'd' || newDir == 's' && direction != 'w' || newDir == 'd' && direction != 'a')
             {
                 direction = newDir;
             }

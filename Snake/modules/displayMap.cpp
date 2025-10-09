@@ -1,6 +1,6 @@
 #include "snake.h"
 
-void displayMap()
+void displayMap(std::vector<std::vector<int>> map)
 {
     int width = map[0].size();
     int height = map.size();
@@ -23,7 +23,7 @@ void displayMap()
                 printf("o ");
                 break;
             case 4:
-                printf("* ");
+                printf("@ ");
                 break;
             case 5:
                 printf("X ");
@@ -32,4 +32,9 @@ void displayMap()
         }
         printf("\n");
     }
+}
+
+void displayMap()
+{
+    displayMap(currentMap);
 }

@@ -1,6 +1,6 @@
 #include "snake.h"
 
-void updateMap(std::pair<int, int> &nextPosition, bool isAlive)
+void updateCurrentMap(std::pair<int, int> &nextPosition, bool isAlive)
 {
     std::pair<int, int> head;
 
@@ -12,7 +12,7 @@ void updateMap(std::pair<int, int> &nextPosition, bool isAlive)
         if (!isFood(nextPosition))
         {
             std::pair<int, int> tail = snake.back();
-            map[tail.first][tail.second] = 0;
+            currentMap[tail.first][tail.second] = 0;
             snake.pop_back();
         }
         else
@@ -22,18 +22,18 @@ void updateMap(std::pair<int, int> &nextPosition, bool isAlive)
             tickDelay = 1000 - speed;
             createNewFood();
         }
-        map[head.first][head.second] = 2;
+        currentMap[head.first][head.second] = 2;
     }
     else
     {
         head = snake.front();
-        map[head.first][head.second] = 5;
+        currentMap[head.first][head.second] = 5;
     }
 
     std::pair<int, int> body;
     for (int i = 1; i < snake.size(); i++)
     {
         body = snake[i];
-        map[body.first][body.second] = 3;
+        currentMap[body.first][body.second] = 3;
     }
 }

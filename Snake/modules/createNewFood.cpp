@@ -1,13 +1,15 @@
 #include "snake.h"
 
-void createNewFood() 
+void createNewFood()
 {
+    int randomY, randomX;
     while (true)
     {
-        int randomY = rand() % map.size();
-        int randomX = rand() % map[0].size();
-        if (isEmpty({randomY,randomX})) {
-            map[randomY][randomX] = 4;
+        randomY = rand() % currentMap.size();
+        randomX = rand() % currentMap[0].size();
+        if (isEmpty({randomY, randomX}))
+        {
+            currentMap[randomY][randomX] = 4;
             return;
         }
     }
