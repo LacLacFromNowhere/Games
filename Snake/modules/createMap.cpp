@@ -1,6 +1,6 @@
 #include "snake.h"
 
-void createEmptyMap(int width, int height)
+void createMap(int width, int height)
 {
     map.clear();
 

@@ -32,7 +32,7 @@ extern int tickDelay;
 void clearInputBuffer();
 bool isEmpty(std::pair<int, int> position);
 bool isFood(std::pair<int, int> position);
-void createEmptyMap(int width = mapWidth, int height = mapHeight);
+void createMap(int width = mapWidth, int height = mapHeight);
 void createMap(std::vector<std::vector<int>> newMap);
 void createNewFood();
 void spawnSnake(int size = snakeSize);
