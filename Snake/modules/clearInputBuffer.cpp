@@ -2,8 +2,8 @@
 
 void clearInputBuffer()
 {
-    while (_kbhit)
+    while (_kbhit())
     {
-        _getch;
+        _getch();
     }
 }
